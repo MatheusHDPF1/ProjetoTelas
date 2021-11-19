@@ -4,7 +4,7 @@
       [
         "expo-image-picker",
         {
-          "photosPermission": "Permitir alguma coisa"
+          "photosPermission": "Permitir acesso a galeria"
         }
       ]
     ],
@@ -25,13 +25,25 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Permitir acesso a galeria",
+        "NSCameraUsageDescription": "Allow $(PRODUCT_NAME) to access your camera",
+        "NSMicrophoneUsageDescription": "Allow $(PRODUCT_NAME) to access your microphone"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.matheus.hpferreira.projetotelas"
     },
     "web": {
       "favicon": "./assets/favicon.png"

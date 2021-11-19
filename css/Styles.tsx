@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
 
 export const formato = StyleSheet.create({
     conteudo:{
@@ -36,4 +36,13 @@ export const formato = StyleSheet.create({
       margin:'auto',
       padding:20
     },
+    mapa:{
+        width:Dimensions.get('window').width,
+        height:Dimensions.get('window').height,
+    },
+    pw:{
+        flex:1,
+        justifyContent:"center",
+        marginTop:30
+    }
 })
